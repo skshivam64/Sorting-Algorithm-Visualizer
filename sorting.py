@@ -43,9 +43,11 @@ class Array:
 
 
 def counting_sort(nums):
+    
     if nums.get_len() == 0:
         return
     min_, max_ = nums.values[0], nums.values[0]
+
     # Finding the range of values to determine size of counting array
     for i in range(nums.get_len()):
         if nums.values[i] > max_:
@@ -53,10 +55,13 @@ def counting_sort(nums):
         if nums.values[i] < min_:
             min_ = nums.values[i]
     range_ = max_ - min_ + 1
+
     # Creating a counting array with initial count of each being 0
     cnt = Array([0]*range_)
     for i in range(nums.get_len()):
         cnt.values[nums.values[i] - min_] += 1
+
+    # Sorting the array based on counts of each element stored
     k = 0
     for i in range(cnt.get_len()):
         for j in range(cnt.values[i]):

@@ -14,6 +14,8 @@ Algorithms covered so far:
 | Merge Sort | merge_sort |
 | Counting Sort | counting_sort |
 
+# Note:
+  Increase or decrease the plotting speed by reducing and decreasing the pause time respectively in visualizer.py 
 # Usage:
 
 Install

@@ -5,7 +5,8 @@ import sys
 def plot(arr):
     plt.clf()
     plt.bar(range(len(arr)), arr, align='edge', width=1, data=arr)
-    plt.pause(0.001)
+    # Calibrate the pause time to hasten or slow down plotting
+    plt.pause(0.0001)
 
 
 def on_close(event):
