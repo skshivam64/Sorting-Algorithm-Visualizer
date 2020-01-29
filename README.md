@@ -2,7 +2,7 @@
 
 Visualizing sorting algorithms, using the matplotlib library.
 
-Algorithms covered so far: 
+Algorithms covered so far:
 
 | Name | Function Name |
 | - |:-: |
@@ -12,12 +12,13 @@ Algorithms covered so far:
 | Insertion Sort | insertion_sort |
 | Heap Sort | heap_sort |
 | Merge Sort | merge_sort |
+| Counting Sort | counting_sort |
 
 # Usage:
 
 Install
 
-```pip install -r requirements.txt``` 
+```pip install -r requirements.txt```
 
 Run
 
@@ -26,7 +27,7 @@ Run
 Pass function name as a command line argument from list of functions above
 (in all lower case and spaces replaced by underscore).
 
-**For example:** 
+**For example:**
 
 ```python main.py quick_sort```
 

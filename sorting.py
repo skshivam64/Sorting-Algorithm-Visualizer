@@ -42,6 +42,28 @@ class Array:
         return len(self.values)
 
 
+def counting_sort(nums):
+    if nums.get_len() == 0:
+        return
+    min_, max_ = nums.values[0], nums.values[0]
+    # Finding the range of values to determine size of counting array
+    for i in range(nums.get_len()):
+        if nums.values[i] > max_:
+            max_ = nums.values[i]
+        if nums.values[i] < min_:
+            min_ = nums.values[i]
+    range_ = max_ - min_ + 1
+    # Creating a counting array with initial count of each being 0
+    cnt = Array([0]*range_)
+    for i in range(nums.get_len()):
+        cnt.values[nums.values[i] - min_] += 1
+    k = 0
+    for i in range(cnt.get_len()):
+        for j in range(cnt.values[i]):
+            nums.set(k, i + min_)
+            k += 1
+
+
 def bubble_sort(nums):  # n^2
     # We set swapped to True so the loop looks runs at least once
     swapped = True
